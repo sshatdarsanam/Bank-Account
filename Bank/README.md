@@ -12,7 +12,7 @@ Instructions to deploy contracts:
 3. When deploying using visual studio run the truffle compile first
 4. Then run the truffle migrate to get the output
 5. Run the index.js to check if the contract is working successfully
-5. To run the smart contract using web3 see that the Ganache is up and running
+5. To run the smart contract using web3 check the Ganache connection
 
 Launching the API server:
 1. Execute the app.js file 
