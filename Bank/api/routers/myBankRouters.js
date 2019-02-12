@@ -1,0 +1,10 @@
+const express = require('express')
+const router = express.Router()
+const myBankController = require('../controllers/myBankControllers')
+router.post('/myBank/enroll', myBankController.enroll)
+router.put('/myBank/:ownerId/deposit', myBankController.deposit)
+router.put('/myBank/:ownerId/withdraw', myBankController.withdraw)
+router.get('/myBank/:ownerId/balance', myBankController.balance)
+router.get('/myBank/customerCount', myBankController.customerCount)
+router.get('/myBank/customers', myBankController.customers)
+module.exports = router;
