@@ -12,13 +12,16 @@ contract MyBank {
     //Enroll new customers
     function enroll(uint ownerId, uint amount) public returns (uint) {
         balances[ownerId] = amount;
-        owners.push(ownerId);
-        
+        owners.push(ownerId);   
     }
        
     //Deposit money into the bank account and emit the event with new balance
     function deposit(uint ownerId, uint amount) public payable returns (uint ) {
-        balances[ownerId] += amount;
+        for(uint i=0;i<owners.length;i++){
+            if(ownerId==owners[i]){
+                 balances[ownerId] += amount;
+            }
+        }
         emit DepositMade(ownerId, balances[ownerId]);
     }
 
